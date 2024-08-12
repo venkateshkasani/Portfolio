@@ -5,6 +5,7 @@ import Projects,{ProjectsTimeline} from './Projects';
 import Footer,{FooterTimeline} from './Footer';
 import { MediaLinks } from '../helpers/data';
 import gsap from 'gsap';
+import Floater from './Components/Floater';
 
 const Homepage:React.FC = () => {
   const tl = gsap.timeline();
@@ -16,6 +17,7 @@ const Homepage:React.FC = () => {
   },[])
   return (
    <div className='mx-0'>
+    <Floater />
   <CardsComponent />
    <About />
    <Projects />

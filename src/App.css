@@ -44,7 +44,7 @@
 .read-the-docs {
   color: #888;
 }
-#intro1,#intro2,#heading{
+#intro1,#intro2,#heading,#headingsm{
   background: linear-gradient(to right, rgb(116, 116, 116), rgb(3, 97, 138));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

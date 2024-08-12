@@ -60,9 +60,9 @@ const CardsComponent = () => {
     }, []);
   
     // Function to handle the activation of a link.
-    const handleSetActive = (to:string) => {
-      console.log(to)
-    }
+    // const handleSetActive = (to:string) => {
+    //   console.log(to)
+    // }
   return (
     <section className='md:px-0 sm:pl-2 pl-0 mx-6'>
      <div className='text-white w-[100vw] pt-2 px-4 mb-7'>

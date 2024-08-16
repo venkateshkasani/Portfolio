@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import TextPlugin from 'gsap/TextPlugin'
 import { Link, Events, scrollSpy } from 'react-scroll';
-
+// Must register the plugin before using.
 gsap.registerPlugin(TextPlugin)
 export const CardsTimeline = () => {
   const intro:string = "I'm Venkatesh. A developer transforming visionary ideas into reality."

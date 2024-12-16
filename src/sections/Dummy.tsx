@@ -10,7 +10,7 @@ const Dummy = () => {
   const Scene = new Three.Scene();
   const Camera = new Three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   const Renderer = new Three.WebGLRenderer();
-  Renderer.setSize = window.innerWidth,window.innerHeight;
+  // Renderer.setSize = window.innerWidth,window.innerHeight;
   Renderer.setAnimationLoop( animate )
   document.body.appendChild(Renderer.domElement);
   const geometry = new Three.BoxGeometry(2,2,2);

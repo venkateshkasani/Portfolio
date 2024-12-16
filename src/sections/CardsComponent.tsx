@@ -35,7 +35,7 @@ export const CardsTimeline = () => {
 return tl;
 }
 const CardsComponent = () => {
-  const linkToResume = "https://drive.google.com/file/d/1Pn8BtLQXWtQ2I013pxUK6FPif5xD3HwO/view?usp=sharing"
+  const linkToResume = "https://drive.google.com/file/d/1eJHTX-GpUMVNWujPcT2cmM_cpLRBSwHj/view?usp=sharing"
     // scroll - necessities
     useEffect(() => {
     
@@ -80,10 +80,10 @@ const CardsComponent = () => {
         <p className='font-light py-2 text-slate-400 hover:text-slate-300 transition-all font-sans'>From Classroom to Code:<br/> My academic Journey in Tech</p>
         </Link>
         </div>
-    <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border border-4 border-slate-900 flex flex-col justify-between rounded-2xl duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl">
+    <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border-4 border-slate-900 flex flex-col justify-between rounded-2xl duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl">
     <Link 
       activeClass="active" 
-      to="project_section" 
+      to="project_section"
       spy={true} 
       smooth={true} 
       offset={50} 
@@ -93,7 +93,7 @@ const CardsComponent = () => {
         <div className='font-light font-sans py-2 text-slate-400 hover:text-slate-300 transition-all my-auto flex items-center justify-center'><p>Projects</p></div>
         </Link>
         </div>
-        <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border border-4 border-slate-900 rouneed-md duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl rounded-2xl">
+        <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border-4 border-slate-900 rouneed-md duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl rounded-2xl">
         <Link 
       activeClass="active" 
       to="experience_section" 
@@ -106,7 +106,7 @@ const CardsComponent = () => {
         <p className='font-light font-sans py-2 text-slate-400 hover:text-slate-300 transition-all pt-2'>Experience</p>
         </Link>
         </div>
-        <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border border-4 border-slate-900 duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl rounded-2xl flex flex-col justify-around">
+        <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border-4 border-slate-900 duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl rounded-2xl flex flex-col justify-around">
         <a href={linkToResume} target='blank'>
         <img className='mx-auto hover:scale-105 transition-all duration-500' src='/img/resume.svg' width='75%' height='75%' />
         <p className='font-light py-2 text-slate-400 hover:text-slate-300 transition-all font-sans'>View resume</p>

@@ -6,12 +6,14 @@ interface Prop {
 interface links {
     linkedin:string,
     twitter:string,
-    github:string
+    github:string,
+    coffee:string
 }
 export const MediaLinks:links = {
   github:"https://www.github.com/venkateshkasani",
   twitter:"https://x.com/VKasani81912",
-  linkedin:"https://www.linkedin.com/in/venkatesh-kasani-8614b1239/"
+  linkedin:"https://www.linkedin.com/in/venkatesh-kasani-8614b1239/",
+  coffee:"https://www.buymeacoffee.com/venkateshkasani"
 }
 export const Ecommerce:Prop = {
  title:"Ecommerce App",
@@ -23,8 +25,13 @@ export const Apple:Prop = {
  link:"https://applebyvenkateshh.vercel.app/",
  path:"/img/apple_page.png"
 }
-export const PhotoManager:Prop = {
- title:"Photo Manager App",
- link:"https://github.com/venkateshkasani/Photo-manager-app",
- path:"/img/photo_manager.png"
+export const Martizine:Prop = {
+ title:"Martizine",
+ link:"https://martizine.vercel.app/",
+ path:"/img/martizine.png"
+}
+export const Washtog:Prop = {
+ title:"Washtog",
+ link:"https://www.washtog.com/",
+ path:"/img/washtog.png"
 }

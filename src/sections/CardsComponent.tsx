@@ -35,7 +35,7 @@ export const CardsTimeline = () => {
 return tl;
 }
 const CardsComponent = () => {
-  const linkToResume = "https://drive.google.com/file/d/1rbwSPiOynaquHeUGWo_l43ZtumM-Y5tP/view?usp=sharing"
+  const linkToResume = "https://drive.google.com/file/d/1wClyLS20__yKnAkQySSiqGOHRPduce84/view?usp=sharing"
     // scroll - necessities
     useEffect(() => {
     

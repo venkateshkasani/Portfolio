@@ -96,7 +96,7 @@ const CardsComponent = () => {
         <div className="about w-[90%] sm:[w-40%] lg:w-[20%] border-4 border-slate-900 rouneed-md duration-500 ease-in-out shadow-sky-900 hover:shadow-sky-700 hover:cursor-pointer  shadow-2xl rounded-2xl">
         <Link 
       activeClass="active" 
-      to="experience_section" 
+      to="about_section" 
       spy={true} 
       smooth={true} 
       offset={50} 

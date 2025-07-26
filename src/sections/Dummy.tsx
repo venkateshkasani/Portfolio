@@ -1,6 +1,4 @@
 import { Meteors } from '@/components/magicui/meteors';
-import { Canvas } from '@react-three/fiber'
-import * as Three from 'three';
 
 const Dummy = () => {
   // function animate() {

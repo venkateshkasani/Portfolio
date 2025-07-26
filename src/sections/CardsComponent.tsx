@@ -62,7 +62,7 @@ const CardsComponent = () => {
   return (
     <section className='md:px-0 sm:pl-2 pl-0 mx-6'>
      <div className='text-white w-[100vw] pt-2 px-4 mb-7'>
-        <p id='intro1'  className='hello font-mono my-5 text-slate-600 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold'>Hello there!!</p>
+        <p id='intro1'  className='hello font-mono my-5 text-slate-600 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold'>Hey there!!</p>
         <p id='intro2' className='intro font-mono text-start text-wrap text-xl sm:text-2xl md:text-3xl lg:text-5xl text-slate-500 px-4'></p>
     </div>
     <div>

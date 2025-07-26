@@ -35,3 +35,13 @@ export const Washtog:Prop = {
  link:"https://www.washtog.com/",
  path:"/img/washtog.png"
 }
+export const Antsq:Prop = {
+ title:"Antsq",
+ link:"https://antsq.vercel.app/",
+ path:"/img/antsq.png"
+}
+export const Chainmint:Prop = {
+ title:"ChainMint",
+ link:"https://chainmint-three.vercel.app/",
+ path:"/img/chainmint.png"
+}

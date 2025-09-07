@@ -23,11 +23,13 @@
     "email-js": "^2.0.3",
     "gsap": "^3.12.5",
     "lucide-react": "^0.446.0",
+    "motion": "^12.23.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
     "react-scroll": "^1.9.0",
     "react-toastify": "^10.0.5",
+    "rough-notation": "^0.5.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.169.0"

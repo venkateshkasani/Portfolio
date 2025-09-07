@@ -18,7 +18,12 @@ const TimelineComp:React.FC = () => {
         <section className='aboutSection w-[95vw] mt-5'>
             <div className='p-2'>
             <Timeline mode='alternate' style={{color:"grey",borderColor:'white'}} items = {
-              [{
+              [
+                {
+                color:'#174d78',
+                children:<p className='text-slate-600 font-semibold text-wrap font-mono text-start text-sm md:text-lg'>Product Developer at Vegah LLC (Jul 2025 - present) </p>
+              },
+                {
                 color:'#174d78',
                 children:<p className='text-slate-600 font-semibold text-wrap font-mono text-start text-sm md:text-lg'>Bachelor's Technology in St.Martin's Engineering College(2025 pass-out)</p>
               },
@@ -32,11 +37,7 @@ const TimelineComp:React.FC = () => {
               },
               {
                 color:'#20d666',
-                children:<p className='text-slate-600 text-wrap font-mono text-start text-sm md:text-lg'>Software Developer Intern at BTST Technologies (mar 2024 - may 2024 )</p>
-              },
-              {
-                color:'#174d78',
-                children:<p className='text-slate-600 text-wrap font-mono text-start text-sm md:text-lg'>Sofware Test Automation Internship using Katalon Studio - SmartInternz</p>
+                children:<p className='text-slate-600 text-wrap font-mono text-start text-sm md:text-lg'>Frontend Developer Intern at BTST Technologies (mar 2024 - may 2024 )</p>
               },
               {
                 color:'#174d78',
@@ -45,23 +46,6 @@ const TimelineComp:React.FC = () => {
               {
                 color:'#20d666',
                 children:<p className='text-slate-600 text-wrap font-mono text-start text-sm md:text-lg'>Worked as a freelance web developer and managed to provide services to multiple clients. </p>
-              },
-
-              {
-                color:'#174d78',
-                children:<p className='text-slate-600 text-wrap font-mono text-start text-sm md:text-lg'>Started MERN Stack along with Nextjs and animations using GSAP.</p>
-              },
-              {
-                color:'#174d78',
-                children:<p className='text-slate-600 text-wrap font-mono text-start text-sm md:text-lg'>Developed a communication model for physically challenged people to streamline their process of communication.</p>
-              },
-              {
-                color:'#174d78',
-                children:<p className='text-slate-600 font-semibold text-wrap font-mono text-start text-sm md:text-lg'>Diploma of Education in VNR VJIET</p>
-              },
-              {
-                color:'#174d78',
-                children:<p className='text-slate-600 font-semibold text-wrap font-mono text-start text-sm md:text-lg'>Passed out SSC with a CGPA of 9.8/10</p>
               }
             ]
             } className = '' />

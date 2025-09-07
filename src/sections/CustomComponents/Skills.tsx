@@ -15,7 +15,7 @@ export default function Skills() {
 
 export const SkillItem = ({name}:{name:string}) => {
     return (
-        <span className="flex items-center justify-center px-4 py-2 rounded-full w-fit bg-slate-900">
+        <span className="flex items-center m-1 justify-center px-4 py-2 rounded-full w-fit bg-slate-900">
             <p className="text-xs">{name}</p>
        </span>
     )

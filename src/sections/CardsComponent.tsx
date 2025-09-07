@@ -22,7 +22,7 @@ export const CardsTimeline = () => {
     text:{
       value:intro,
       delimiter:"",
-      speed:2
+      speed:0.5
     }
   })
   .fromTo(('.about'),{
@@ -32,7 +32,7 @@ export const CardsTimeline = () => {
     opacity:1,
     y:0,
     stagger:0.1
-  },"+=2")
+  },"+=7")
 return tl;
 }
 const CardsComponent = () => {

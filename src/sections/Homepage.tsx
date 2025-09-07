@@ -14,7 +14,7 @@ const Homepage:React.FC = () => {
     tl.add(FooterTimeline())
   },[])
   return (
-   <div className='mx-0'>
+   <div>
   <CardsComponent />
    <About />
    <Projects />

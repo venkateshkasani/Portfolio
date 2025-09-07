@@ -13,7 +13,7 @@ export const ProjectsTimeline = () => {
 }
 const Projects:React.FC = () => {
   return (
-    <section id='project_section' className='projectSection w-[92%] my-5 mx-6'>
+    <section className='my-5 px-5 md:px-8'>
       <p className='text-lg md:text-3xl  lg:text-5xl text-slate-600 mb-10'>Projects</p>
         <div className='sm:flex gap-5 flex-wrap justify-between'>
         <ProjectComponent data = {Antsq} />

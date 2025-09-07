@@ -13,7 +13,7 @@ export const AboutTimeline = () => {
 }
 const About:React.FC = () => {
   return(
-  <section id='about_section' className='about mx-6 opacity-0 transform translate-y-[50px] mb-10'>
+  <section className='mb-10'>
   <div className='flex flex-col'>
         <h2 className='text-2xl md:text-4xl text-gray-600 font-semibold my-10'>My journery</h2>
         <TimelineComp /> 

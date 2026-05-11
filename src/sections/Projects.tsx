@@ -1,7 +1,7 @@
 import React from 'react'
 import gsap from 'gsap'
 import ProjectComponent from './ProjectComponent'
-import {Ecommerce,Apple,Martizine, Washtog, Antsq, Chainmint} from '../helpers/data'
+import {Apple,KaimurHills, ManaTrendz, Washtog, Antsq, Chainmint} from '../helpers/data'
 export const ProjectsTimeline = () => {
   const tl = gsap.timeline();
   tl.to('.projectSection',{
@@ -17,11 +17,11 @@ const Projects:React.FC = () => {
       <p className='text-lg md:text-3xl  lg:text-5xl text-slate-600 mb-10'>Projects</p>
         <div className='sm:flex gap-5 flex-wrap justify-between'>
         <ProjectComponent data = {Antsq} />
-        <ProjectComponent data = {Washtog} />
-        <ProjectComponent data = {Martizine} />
+        <ProjectComponent data = {KaimurHills} />
         <ProjectComponent data = {Apple}/>
+        <ProjectComponent data = {ManaTrendz} />
+        <ProjectComponent data = {Washtog} />
         <ProjectComponent data = {Chainmint} />
-        <ProjectComponent data = {Ecommerce} />
         </div>
     </section>
   )

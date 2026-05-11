@@ -15,21 +15,21 @@ export const MediaLinks:links = {
   linkedin:"https://www.linkedin.com/in/venkatesh-kasani-8614b1239/",
   coffee:"https://www.buymeacoffee.com/venkateshkasani"
 }
-export const Ecommerce:Prop = {
- title:"Ecommerce App",
- link:"https://thedarkknights.vercel.app/electronics/headphones",
- path:"/img/batstore.png"
-}
+// export const Ecommerce:Prop = {
+//  title:"Ecommerce App",
+//  link:"https://thedarkknights.vercel.app/electronics/headphones",
+//  path:"/img/batstore.png"
+// }
 export const Apple:Prop = {
  title:"Apple's Complex Frontend",
  link:"https://applebyvenkateshh.vercel.app/",
  path:"/img/apple_page.png"
 }
-export const Martizine:Prop = {
- title:"Martizine",
- link:"https://martizine.vercel.app/",
- path:"/img/martizine.png"
-}
+// export const Martizine:Prop = {
+//  title:"Martizine",
+//  link:"https://martizine.vercel.app/",
+//  path:"/img/martizine.png"
+// }
 export const Washtog:Prop = {
  title:"Washtog",
  link:"https://www.washtog.com/",
@@ -44,4 +44,16 @@ export const Chainmint:Prop = {
  title:"ChainMint",
  link:"https://chainmint-three.vercel.app/",
  path:"/img/chainmint.png"
+}
+
+export const ManaTrendz:Prop = {
+ title:"Mana Trendz",
+ link:"https://mana-trendz.vercel.app/",
+ path:"/img/mana-trendz.jpeg"
+}
+
+export const KaimurHills:Prop = {
+ title:"Kaimur Hillss",
+ link:"https://kaimurhills.com",
+ path:"/img/kaimur.jpeg"
 }

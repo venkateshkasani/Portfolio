@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Avatar Viewer</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #1a1a1a; }
+        canvas { display: block; }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">Loading... (Make sure your file is named 'avatar.glb' in the same folder)</div>
+
+    <!-- Import maps polyfill -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+        // 1. Setup Scene, Camera, and Renderer
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x333333);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(0, 1.5, 3); // Positioned to look at a human figure
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        document.body.appendChild(renderer.domElement);
+
+        // 2. Add Controls
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.target.set(0, 1, 0);
+        controls.update();
+
+        // 3. Add Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        // Optional: Add a nice environment map for realistic lighting/reflections
+        const pmremGenerator = new THREE.PMREMGenerator(renderer);
+        scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+
+        // 4. Load the GLB model
+        const loader = new GLTFLoader();
+        
+        // IMPORTANT: Put your glb file in the same folder and name it 'avatar.glb'
+        loader.load('avatar.glb', function (gltf) {
+            
+            const model = gltf.scene;
+
+            // --- THIS IS WHERE WE ADD/CHANGE COLORS ---
+            // We traverse through all the parts of the model
+            model.traverse((child) => {
+                if (child.isMesh) {
+                    
+                    // You can check the name of the mesh to apply specific colors
+                    // Example: if (child.name.includes("Shirt")) { ... }
+                    
+                    const name = child.name.toLowerCase();
+                    console.log("Found mesh:", name); // LOG THE NAMES TO THE CONSOLE
+                    
+                    let newColor = 0xffffff;
+                    
+                    if (name.includes('hair') || name.includes('beard') || name.includes('eyebrow')) {
+                        newColor = 0x2b1d14; // Dark brown hair
+                    } else if (name.includes('head') || name.includes('body') || name.includes('hand') || name.includes('arm') || name.includes('leg') || name.includes('skin') || name.includes('face') || name.includes('wolf3d_avatar')) {
+                        newColor = 0xd4a373; // Warm skin tone
+                    } else if (name.includes('top') || name.includes('shirt') || name.includes('jacket')) {
+                        newColor = 0x2c3e50; // Dark blue shirt
+                    } else if (name.includes('bottom') || name.includes('pant') || name.includes('jeans')) {
+                        newColor = 0x111111; // Black/dark grey pants
+                    } else if (name.includes('shoe') || name.includes('footwear')) {
+                        newColor = 0xecf0f1; // White sneakers
+                    } else if (name.includes('eye')) {
+                        newColor = 0xffffff; // White of the eyes
+                    } else if (name.includes('teeth')) {
+                        newColor = 0xffffff; // White teeth
+                    } else {
+                        // FALLBACK: If the name doesn't match anything, make it BRIGHT RED so we know
+                        newColor = 0xff0000; 
+                    }
+
+                    // Use MeshBasicMaterial (ignores lighting, shows pure color) to verify it works
+                    child.material = new THREE.MeshBasicMaterial({
+                        color: new THREE.Color(newColor)
+                    });
+                }
+            });
+
+            // Center and scale the model if necessary
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            model.position.x += (model.position.x - center.x);
+            model.position.y += (model.position.y - box.min.y); // Set feet on ground
+            model.position.z += (model.position.z - center.z);
+
+            scene.add(model);
+            document.getElementById('info').style.display = 'none';
+
+        }, undefined, function (error) {
+            console.error('Error loading model:', error);
+            document.getElementById('info').innerText = "Error loading avatar.glb. Is it in the correct folder?";
+        });
+
+        // 5. Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // 6. Handle Window Resize
+        window.addEventListener('resize', onWindowResize, false);
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+    </script>
+</body>
+</html>

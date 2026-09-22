@@ -1,6 +1,6 @@
 
 export default function Skills() {
-    const skills = ["React", "Next.js","TypeScript", "TailwindCSS","Nest.js","Express.js","MongoDB","PostgreSQL","GSAP","Reactflow","Solidity","Java"]
+    const skills = ["Next.js","TypeScript", "LangChain", "LangGraph", "Nest.js","FastAPI","MongoDB","PostgreSQL","GSAP","Reactflow","Solidity","Python","TailwindCSS"]
   return (
       <section className="flex flex-col items-center px-5 md:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-5xl text-slate-600 mb-10 pt-5">Tech stack</h2>
